@@ -19,9 +19,23 @@
             {% else %}
             <td>{{ item.name }}</td>
             {% endif %}
-
-            <td>{{ item.name }}</td>
-            <td>{{ item.done }}</td>
+            <td>
+                <a href="/edit/{{ item.id }}">
+                    <button>Edit</button>
+                </a>
+            </td>
+            <td>
+                <a href="/toggle/{{ item.id }}">
+                    <button>toggle</button>
+                </a>
+            </td>
+            <td>
+                <a href="/delete/{{ item.id }}">
+                    <button>delete</button>
+                </a>
+            </td>
+            <!-- <td>{{ item.name }}</td>
+            <td>{{ item.done }}</td> -->
         </tr>
         {% empty %}
         <tr>
